@@ -7,7 +7,9 @@ public class ConsoleLogger {
     public enum Types {
         DEBUG,
         INFO,
-        ERROR
+        WARN,
+        ERROR,
+        FATAL
     }
 
     private static Types DEFAULT = Types.INFO;
@@ -42,7 +44,15 @@ public class ConsoleLogger {
         log(message, Types.INFO);
     }
 
+    public void warn(String message){
+        log(message, Types.WARN);
+    }
+
     public void error(String message){
         log(message, Types.ERROR);
+    }
+
+    public void fatal(String message){
+        log(message, Types.FATAL);
     }
 }

@@ -12,7 +12,9 @@ public class DefaultError {
                         Enter default error type:
                         1) DEBUG
                         2) INFO
-                        3) ERROR""");
+                        3) WARN
+                        4) ERROR
+                        5) FATAL""");
                 ConsoleLogger.Types type = ConsoleLogger.Types.valueOf(scan.nextLine());
                 ConsoleLogger.setDEFAULT(type);
                 break;
