@@ -25,6 +25,8 @@ public class Main {
         }
         logger.debug("This is an debug message");
         logger.info("This is an info message");
+        logger.error("This is an warn message");
         logger.error("This is an error message");
+        logger.error("This is an fatal message");
     }
 }
