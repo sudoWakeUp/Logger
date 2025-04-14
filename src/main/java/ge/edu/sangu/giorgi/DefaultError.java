@@ -2,7 +2,18 @@ package ge.edu.sangu.giorgi;
 
 import java.util.Scanner;
 
+/**
+ * This class provides the set() method for setting the default logging level
+ */
+
 public class DefaultError {
+
+    /**
+     * using <a href="https://www.w3schools.com/java/java_while_loop.asp">while loop</a> we will define default logging level
+     * @see ConsoleLogger
+     *
+     * @author sudoWakeUp
+     */
 
     public static void set(){
         while(true) {
