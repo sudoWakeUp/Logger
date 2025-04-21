@@ -1,5 +1,8 @@
 package ge.edu.sangu.giorgi;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.Scanner;
 
 /**
@@ -8,6 +11,7 @@ import java.util.Scanner;
 
 public class DefaultError {
 
+    private static final Logger myLogger = LogManager.getLogger(DefaultError.class);
     /**
      * using <a href="https://www.w3schools.com/java/java_while_loop.asp">while loop</a> we will define default logging level
      * @see ConsoleLogger
@@ -16,6 +20,7 @@ public class DefaultError {
      */
 
     public static void set(){
+        myLogger.debug("set() called");
         while(true) {
             try {
                 Scanner scan = new Scanner(System.in);
@@ -30,7 +35,7 @@ public class DefaultError {
                 ConsoleLogger.setDEFAULT(type);
                 break;
             } catch (Exception e){
-                System.out.println("Entered type doesn't exist");
+                myLogger.error("Entered type doesn't exist");
             }
         }
     }

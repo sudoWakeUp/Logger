@@ -1,5 +1,8 @@
 package ge.edu.sangu.giorgi;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.time.LocalDateTime;
 
 /**
@@ -9,6 +12,8 @@ import java.time.LocalDateTime;
  */
 
 public class ConsoleLogger {
+
+    private static final Logger myLogger = LogManager.getLogger(ConsoleLogger.class);
 
     /**
      * Enum contains logging level types
@@ -45,11 +50,13 @@ public class ConsoleLogger {
      * @throws IllegalArgumentException if logging level is null
      */
     public static void setDEFAULT(Types DEFAULT) {
+        myLogger.debug("setDEFAULT() called");
         if (DEFAULT == null){
-            throw new IllegalArgumentException("Logging level can't be null");
+            myLogger.error("Logging level can't be null");
         }
 
         ConsoleLogger.DEFAULT = DEFAULT;
+        myLogger.debug("Default level set to {}", DEFAULT);
     }
 
     /**
@@ -64,7 +71,7 @@ public class ConsoleLogger {
      */
     private void log(String message, Types logType){
         if(message == null || message.isBlank())
-            throw new IllegalArgumentException("I can't log null or empty message ...");
+            myLogger.error("Message is null or blank!!!");
 
         if (logType.ordinal() >= DEFAULT.ordinal()) {
             String time = String.valueOf(LocalDateTime.now());
@@ -79,6 +86,7 @@ public class ConsoleLogger {
      */
 
     public void debug(String message){
+        myLogger.debug("debug() called with message: {}", message);
         log(message, Types.DEBUG);
     }
 
@@ -89,6 +97,7 @@ public class ConsoleLogger {
      */
 
     public void info(String message){
+        myLogger.debug("info() called with message: {}", message);
         log(message, Types.INFO);
     }
 
@@ -99,6 +108,7 @@ public class ConsoleLogger {
      */
 
     public void warn(String message){
+        myLogger.debug("warn() called with message: {}", message);
         log(message, Types.WARN);
     }
 
@@ -109,6 +119,7 @@ public class ConsoleLogger {
      */
 
     public void error(String message){
+        myLogger.debug("error() called with message: {}", message);
         log(message, Types.ERROR);
     }
 
@@ -119,6 +130,7 @@ public class ConsoleLogger {
      */
 
     public void fatal(String message){
+        myLogger.debug("fatal() called with message: {}", message);
         log(message, Types.FATAL);
     }
 }
