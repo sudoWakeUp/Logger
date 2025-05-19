@@ -26,11 +26,12 @@ public class DefaultError {
                 Scanner scan = new Scanner(System.in);
                 System.out.println("""
                         Enter default error type:
-                        1) DEBUG
-                        2) INFO
-                        3) WARN
-                        4) ERROR
-                        5) FATAL""");
+                        1) TRACE
+                        2) DEBUG
+                        3) INFO
+                        4) WARN
+                        5) ERROR
+                        6) FATAL""");
                 ConsoleLogger.Types type = ConsoleLogger.Types.valueOf(scan.nextLine());
                 ConsoleLogger.setDEFAULT(type);
                 break;
