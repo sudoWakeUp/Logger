@@ -26,7 +26,7 @@ public class Main {
             myLogger.error(e.getMessage());
         }
 
-
+        logger.trace("This is an trace message");
         logger.debug("This is an debug message");
         logger.info("This is an info message");
         logger.warn("This is an warn message");
