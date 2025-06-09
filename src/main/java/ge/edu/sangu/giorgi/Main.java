@@ -33,6 +33,8 @@ public class Main {
         logger.error("This is an error message");
         logger.fatal("This is an fatal message");
 
+        System.out.println("THIS IS A MESSAGE FROM THE NEW FEATURE");
+
         myLogger.info("App ended");
     }
 }
