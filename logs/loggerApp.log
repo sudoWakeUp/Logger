@@ -1,0 +1,27 @@
+2025-04-21 22:01:02,383 [main] INFO : App started
+2025-04-21 22:01:02,388 [main] INFO : set() called
+2025-04-21 22:01:09,067 [main] DEBUG: setDEFAULT() called
+2025-04-21 22:01:09,075 [main] DEBUG: Default level set to DEBUG
+2025-04-21 22:01:09,075 [main] DEBUG: debug() called with message: null
+2025-04-21 22:01:09,075 [main] ERROR: Message is null or blank!!!
+2025-04-21 22:01:09,078 [main] DEBUG: info() called with message:           
+2025-04-21 22:01:09,078 [main] ERROR: Message is null or blank!!!
+2025-04-21 22:01:09,078 [main] DEBUG: debug() called with message: This is an debug message
+2025-04-21 22:01:09,093 [main] DEBUG: info() called with message: This is an info message
+2025-04-21 22:01:09,093 [main] DEBUG: warn() called with message: This is an warn message
+2025-04-21 22:01:09,093 [main] DEBUG: error() called with message: This is an error message
+2025-04-21 22:01:09,093 [main] DEBUG: fatal() called with message: This is an fatal message
+2025-04-21 22:02:24,249 [main] INFO : App started
+2025-04-21 22:02:24,265 [main] DEBUG: set() called
+2025-04-21 22:02:33,405 [main] DEBUG: setDEFAULT() called
+2025-04-21 22:02:33,416 [main] DEBUG: Default level set to INFO
+2025-04-21 22:02:33,416 [main] DEBUG: debug() called with message: null
+2025-04-21 22:02:33,416 [main] ERROR: Message is null or blank!!!
+2025-04-21 22:02:33,416 [main] DEBUG: info() called with message:           
+2025-04-21 22:02:33,416 [main] ERROR: Message is null or blank!!!
+2025-04-21 22:02:33,420 [main] DEBUG: debug() called with message: This is an debug message
+2025-04-21 22:02:33,420 [main] DEBUG: info() called with message: This is an info message
+2025-04-21 22:02:33,420 [main] DEBUG: warn() called with message: This is an warn message
+2025-04-21 22:02:33,420 [main] DEBUG: error() called with message: This is an error message
+2025-04-21 22:02:33,420 [main] DEBUG: fatal() called with message: This is an fatal message
+2025-04-21 22:02:33,420 [main] INFO : App ended
