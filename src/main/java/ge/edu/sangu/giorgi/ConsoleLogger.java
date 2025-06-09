@@ -22,6 +22,7 @@ public class ConsoleLogger {
      */
 
     public enum Types {
+        TRACE,
         DEBUG,
         INFO,
         WARN,
@@ -80,11 +81,20 @@ public class ConsoleLogger {
     }
 
     /**
+     * method logs trace message
+     *
+     * @param message message to log
+     */
+    public void trace(String message){
+        myLogger.trace("trace() called with message: {}", message);
+        log(message, Types.TRACE);
+    }
+
+    /**
      * method logs debug message
      *
      * @param message message to log
      */
-
     public void debug(String message){
         myLogger.debug("debug() called with message: {}", message);
         log(message, Types.DEBUG);
